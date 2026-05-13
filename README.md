@@ -25,7 +25,7 @@ Splitting the data ensures that the model is trained on one set of images and ev
 ### 3. Performance Analysis
 
 **What accuracy did your model achieve?**
-The model achieved a validation accuracy of approximately **[insert your accuracy here]**.
+The model achieved a validation accuracy of approximately **93.74%** on the initial run without augmentation, and **85.31%** on the improved run with data augmentation and dropout.
 
 **How did the number of images affect the model’s performance?**
 A larger number of images improves model performance by providing more examples for learning, helping the model generalize better. With fewer images, the model may overfit or have lower accuracy.
@@ -61,7 +61,7 @@ The trained model can be deployed on a server or converted into a mobile-friendl
 ### Visualization & Overfitting
 
 **1. What signs indicated overfitting in your first model?**
-Overfitting was indicated when the training accuracy continued to increase while the validation accuracy stopped improving or started to decrease. Additionally, there was a noticeable gap between training and validation accuracy, showing that the model was performing well on training data but poorly on unseen data.
+Overfitting was very evident in the first model as the training accuracy reached a perfect **100% (1.0000)** with a near-zero loss of **0.00009**, while the validation accuracy plateaued at **93.74%**. Furthermore, looking at the loss data, the validation loss started increasing after epoch 3 (from 0.34 to 0.46), which is a classic sign of the model memorizing the training data and struggling on unseen data.
 
 **2. How did data augmentation affect validation accuracy?**
 Data augmentation improved validation accuracy by providing more varied training examples. This helped the model generalize better to unseen data, resulting in more stable and often higher validation performance.
@@ -81,7 +81,7 @@ Data augmentation improves generalization by exposing the model to different var
 ### Performance Comparison
 
 **5. Compare accuracy before and after improvements.**
-Before applying improvements, the model showed higher training accuracy but lower validation accuracy, indicating overfitting. After applying data augmentation and dropout, the validation accuracy improved and became closer to the training accuracy, showing better generalization.
+Before the improvements, the model had a perfect **100%** training accuracy but a lower **93.7%** validation accuracy, showing severe overfitting. After applying data augmentation and dropout, the training accuracy was **80.55%**, but the validation accuracy actually became higher at **85.31%**. While the absolute peak accuracy slightly decreased, the model is now much healthier and generalizes far better, as the massive gap between training and validation performance has been eliminated.
 
 **6. Which technique contributed most to improvement?**
 Data augmentation contributed the most to improvement because it effectively increased the diversity of the dataset. This allowed the model to learn from more variations and reduced overfitting more significantly.
