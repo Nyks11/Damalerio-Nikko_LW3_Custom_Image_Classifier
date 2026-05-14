@@ -1,5 +1,7 @@
 # Damalerio-Nikko_LW3_Custom_Image_Classifier
 
+Google Colab Link - [![Open In Colab](https://colab.research.google.com/drive/1JHjIpgx3XKZwT0NDe_kI03vFR7UrHPMB?usp=sharing)	
+
 ## Guide Questions – Student Reflection & Explanation
 
 ### 1. Dataset Preparation
